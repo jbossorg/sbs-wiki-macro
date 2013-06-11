@@ -1,0 +1,728 @@
+<!-- saved from url=(0050)http://oatmeal:8080/clearspace/markuphelpfull.jspa -->
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Text Markup Syntax Help</TITLE>
+<STYLE type="text/css">
+@import "/clearspace/styles/jive-global.css";
+</STYLE>
+<TITLE>&lt;!-- Plain Text Help --&gt;
+            Text Markup Syntax Help</TITLE>
+<STYLE type="text/css">
+@import "/clearspace/styles/jive-popup.css";
+</STYLE>
+<style>
+    body {
+        background-color:#E6E7E8;
+        background-image:url(http://www.jboss.org/theme/images/common/bkgslimheader_left.png);
+        background-repeat:repeat-x;
+        font-family:'Lucida Grande',Geneva,Verdana,Arial,sans-serif;
+        font-size:12px;
+        margin:0;
+        padding:0;
+        text-align:center;
+        }
+     #container {
+        margin:0 auto;
+        text-align:left;
+        width:969px;
+        }
+    #ORGheader {
+        background-color:#3B4F66;
+        background-image:url(http://www.jboss.org/theme/images/common/bkgslimheader_noleft.png);
+        background-repeat:repeat-x;
+        height:45px;
+        margin:0 auto;
+        width:974px;
+        }
+    #ORGheader h1 {
+        -moz-background-clip:border;
+        -moz-background-inline-policy:continuous;
+        -moz-background-origin:padding;
+        background:transparent url(http://www.jboss.org/theme/images/common/jbosscomm_hdrlogo.png) no-repeat scroll 0 0;
+        float:left;
+        height:45px;
+        margin:0;
+        padding:0;
+        text-indent:-9999px;
+        width:192px;
+        }   
+    #contentcontainer {
+        background-color:#FFFFFF;
+        background-image:url(http://www.jboss.org/theme/images/common/bkgblur_right.gif);
+        background-position:right center;
+        background-repeat:repeat-y;
+        clear:both;
+        margin:0 auto;
+        text-align:left;
+        width:980px;
+        }
+    #container_grey {
+        -moz-background-clip:border;
+        -moz-background-inline-policy:continuous;
+        -moz-background-origin:padding;
+        background:#CCCCCC url(http://www.jboss.org/theme/images/common/bkg_greycontainer.png) repeat scroll 0 0;
+        color:#6D6D6D;
+        margin-right:7px;
+        padding:7px 7px 0 8px;
+        }
+    #main-contentwrapper {
+        background-color:#FFFFFF;
+        display:block;
+        font-size:12px;
+        overflow:hidden;
+        width:957px;
+        }
+    #mainColumn {
+        padding-bottom:2px;
+        padding-left:20px;
+        padding-right:20px;
+        }
+    #one-col-corners {
+        background:transparent url(http://www.jboss.org/theme/images/magnolia/corners-one-col.png) no-repeat scroll left top;
+        clear:both;
+        display:block;
+        height:14px;
+        margin:0 0 0 0;
+        padding-bottom:5px;
+        width:100%;
+        }
+    .footer {
+        background-color:#E6E7E8;
+        background-image:url(http://www.jboss.org/theme/images/common/bkgblur_bottom.gif);
+        background-position:center top;
+        background-repeat:no-repeat;
+        clear:both;
+        color:#A1A1A1;
+        font-size:10px;
+        padding:6px 0;
+        text-align:center;
+        }
+    .footer a {
+        color:#A1A1A1;
+        }
+    .footer p {
+        margin:0;
+        padding:1px;
+        }
+        
+h1 {
+    font-size:26px;
+    font-weight: normal;
+    display:block;
+    font-family:Myriad Pro, Helvetica;
+    color:#CC0000;
+    letter-spacing:-.02em;
+}
+h2 {
+    font-size:24px;
+    font-weight: normal;
+    display:block;
+    font-family:Myriad Pro, Helvetica;
+    color:#424242;
+    margin-top:5px;
+    font-weight:normal;
+    letter-spacing:-.03em;
+}
+h3 {
+    font-size:25px;
+    font-weight: normal;
+    display:block;
+    font-family:Myriad Pro, Helvetica;
+    color:#88201B;
+    margin-top:20px;
+    margin-bottom:3px;
+    letter-spacing:-.03em;
+}
+h4 {
+    font-size:20px;
+    font-weight: normal;
+    display:block;
+    font-family:"Lucida Grande","Lucida Sans Unicode",Helvetica;
+    color:#494949;
+    margin-top:20px;
+    margin-bottom:3px;
+    font-weight:normal;
+    letter-spacing:-.04em;  
+}
+h5 {
+    color:#005E8F;
+    font-family:"Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,sans-serif;
+    font-size:16px;
+    letter-spacing:-.02em;  
+    margin-bottom:3px;
+    margin-top:10px;
+}
+h6 {
+    color:#545353;
+    font-family:"Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    margin-bottom:3px;
+    margin-top:10px;
+    letter-spacing:-.02em;  
+}
+        
+    table {
+        background-color:#E6E7E8;
+        }       
+
+    table img {
+        border:0px;
+        }
+    
+    td {
+        height:3em;
+        padding-left: 6px;
+        font-size:11px;
+        padding:10px 5px;
+        text-align:left;
+        }
+    
+    th {
+        font-size:12px;
+        font-weight:normal;
+        padding:0 10px 0 5px;
+        border-bottom:#999999 dotted 1px;
+        background:url(http://www.jboss.org/theme/images/magnolia/bkg-blkheader.png)  #000000 repeat-x top left;
+        height:31px;
+        color:#FFFFFF;
+        text-align:left;
+        }
+    
+    a {
+        color:#336699;
+        text-decoration:none;
+        }
+    a:hover {
+        color:#0099CC;
+        text-decoration:underline;
+        }
+    
+    tr td {
+        padding: 0px 10px 0px 5px;
+        }
+    
+    tr { /* this targets all rows in case of old browsers */
+        background-color:#FFFFFF;
+        }
+    tr:nth-child(2n) { /* this targets even rows in css3 for newer browsers to zebra-stripe*/
+        background-color:#F4F3F3;
+        }
+    pre {
+      margin: 0px;
+      padding: 10px;
+      overflow:auto;
+      border: 1px solid #e6e7e8;
+     }
+     pre.code-block {
+    font-family:"Courier New", Courier, monospace;
+    font-size:12px;
+    color:#000000;
+    background-color:#FFFFFF;
+    background-image:url(http://www.jboss.org/theme/images/common/jive-bg-pre.png); background-repeat:repeat;
+    border-color:#EEEEEE #EEEEEE #EEEEEE #CCCCCC;
+    border-style:solid;
+    border-width:1px 1px 1px 2px;
+    padding:10px;
+    max-height:200px;
+    display:block;
+    overflow:auto;
+    white-space:pre;
+}
+
+        
+</style>
+
+</HEAD>
+<BODY>
+<div id="container">
+    <div id="ORGheader">
+        <h1><a href="/">JBoss Community</a></h1>
+    </div>
+    <div id="contentcontainer">
+        <div id="container_grey">
+            <div id="main-contentwrapper">
+                <div id="mainColumn">
+                    <h2 style="margin-top:25px;">Plain Text Markup Help</h2>
+                    <P>This page describes the special markup you can use to format your content in the plain text editor.</P>
+                    <H3>Text Formatting</H3>
+                    <table width="100%" cellspacing="1" cellpadding="0" border="0" style="margin-top: 12px;">
+        <THEAD>
+          <TR>
+            <TH>Item</TH>
+            <TH> <!-- Markup -->
+              Markup </TH>
+            <TH> <!-- Result -->
+              Result </TH>
+          </TR>
+        </THEAD>
+        <TBODY>
+          <TR>
+            <TD>Bold</TD>
+            <TD><!-- *bold* -->
+              *ABC* </TD>
+            <TD><!-- <b>bold</b> -->
+              <B>ABC</B> </TD>
+          </TR>
+          <TR>
+            <TD>Italic</TD>
+            <TD><!-- +italics+ -->
+              +ABC+ </TD>
+            <TD><!-- <i>italics</i> -->
+              <I>ABC</I> </TD>
+          </TR>
+          <TR>
+            <TD>Underline</TD>
+            <TD><!-- _underline_ -->
+              _ABC_ </TD>
+            <TD><!-- <u>underline</u> -->
+              <U>ABC</U> </TD>
+          </TR>
+          <TR>
+            <TD>Superscript</TD>
+            <TD><!-- Superscript: 3^rd^ -->
+              3^rd^ </TD>
+            <TD><!--3<sup>rd</sup>-->
+              3 <SUP>rd</SUP> </TD>
+          </TR>
+          <TR>
+            <TD>Subscript</TD>
+            <TD><!-- Subscript: 2~n~ -->
+              2~n~ </TD>
+            <TD><!-- 2<sub>n</sub> -->
+              2 <SUB>n</SUB> </TD>
+          </TR>
+          <TR>
+            <TD>Strikethrough</TD>
+            <TD><!-- --strike-- -->
+              --ABC-- </TD>
+            <TD><!--<strike>strike</strike>-->
+              <STRIKE>ABC</STRIKE> </TD>
+          </TR>
+          <TR>
+            <TD>Numbered list</TD>
+            <TD><!-- # ABC
+                                         # ABC -->
+              # ABC<BR>
+              # ABC </TD>
+            <TD><!-- 1 ABC
+                                         2 ABC -->
+              <OL>
+                <LI>ABC</LI>
+                <LI>ABC</LI>
+              </OL></TD>
+          </TR>
+          <TR>
+            <TD>Bulleted list</TD>
+            <TD><!-- * ABC
+                                         * ABC -->
+              * ABC<BR>
+              * ABC </TD>
+            <TD><!-- - ABC
+                                         - ABC -->
+              <UL>
+                <LI>ABC</LI>
+                <LI>ABC</LI>
+              </UL></TD>
+          </TR>
+          <TR>
+            <TD>Blockquote</TD>
+            <TD>bq. ABC</TD>
+            <TD><BLOCKQUOTE>ABC</BLOCKQUOTE></TD>
+          </TR>
+          <TR>
+            <TD>No formatting</TD>
+            <TD>{noformat}ABC{noformat}</TD>
+            <TD><CODE>ABC</CODE> </TD>
+          </TR>
+          <TR>
+            <TD>Color</TD>
+            <TD>{color:#f00}ABC{color}</TD>
+            <TD><SPAN style="color:#f00">ABC</SPAN> </TD>
+          </TR>
+          <TR>
+            <TD>Color</TD>
+            <TD>{color:red}ABC{color}</TD>
+            <TD><SPAN style="color:red">ABC</SPAN> </TD>
+          </TR>
+          <TR>
+            <TD>Font</TD>
+            <TD>{font:courier new}ABC{font}</TD>
+            <TD><SPAN style="font-family:courier new">ABC</SPAN> </TD>
+          </TR>
+          <TR>
+            <TD>Size</TD>
+            <TD>{size:16px}ABC{size}</TD>
+            <TD><SPAN style="font-size:16px">ABC</SPAN> </TD>
+          </TR>
+          <TR>
+            <TD>Line</TD>
+            <TD><!-- Line: ----- -->
+              ----- </TD>
+            <TD><!-- <hr /> -->
+              <HR>
+            </TD>
+          </TR>
+          <TR>
+            <TD>Heading 1</TD>
+            <TD><!-- Heading 1: h1. -->
+              h1. ABC </TD>
+            <TD><!-- <h1>ABC</h1> -->
+              <H1>ABC</H1></TD>
+          </TR>
+          <TR>
+            <TD>Heading 2</TD>
+            <TD><!-- Heading 2: h2. -->
+              h2. ABC </TD>
+            <TD><!-- <h2>ABC</h2> -->
+              <H2>ABC</H2></TD>
+          </TR>
+          <TR>
+            <TD>Heading 3</TD>
+            <TD><!-- Heading 3: h3. -->
+              h3. ABC </TD>
+            <TD><!-- <h3>ABC</h3> -->
+              <H3>ABC</H3></TD>
+          </TR>
+          <TR>
+            <TD>Heading 4</TD>
+            <TD><!-- Heading 4: h4. -->
+              h4. ABC </TD>
+            <TD><!-- <h4>ABC</h4> -->
+              <H4>ABC</H4></TD>
+          </TR>
+          <TR>
+            <TD>Heading 5</TD>
+            <TD><!-- Heading 5: h5. -->
+              h5. ABC </TD>
+            <TD><!-- <h5>ABC</h5> -->
+              <H5>ABC</H5></TD>
+          </TR>
+          <TR>
+            <TD>Heading 6</TD>
+            <TD><!-- Heading 6: h6. -->
+              h6. ABC </TD>
+            <TD><!-- <h6>ABC</h6> -->
+              <H6>ABC</H6></TD>
+          </TR>
+          <TR>
+            <TD>Quoted text</TD>
+            <TD>{quote}ABC{quote}</TD>
+            <TD><DIV class="jive-quote">ABC</DIV></TD>
+          </TR>
+          <TR>
+            <TD>Quoted text/title</TD>
+            <TD>{quote:title=ABC title}ABC text{quote}</TD>
+            <TD><SPAN class="jive-quote-header">ABC title</SPAN>
+              <DIV class="jive-quote">ABC text</DIV></TD>
+          </TR>
+          <TR>
+            <TD>Java code</TD>
+            <TD>{code}import com.jivesoftware.community.*;{code}</TD>
+            <TD><PRE class="jive-pre"><CODE class="jive-code jive-java"><FONT color="navy"><B>import</B></FONT> com.jivesoftware.community.*;</CODE></PRE>
+            </TD>
+          </TR>
+          <TR>
+            <TD>SQL code</TD>
+            <TD>{code:sql}SELECT COUNT(*) FROM abc;{code}</TD>
+            <TD><PRE class="jive-pre"><CODE class="jive-code jive-sql"><FONT color="navy"><B>SELECT COUNT</B></FONT>(*) <FONT color="navy"><B>FROM</B></FONT> abc;</CODE></PRE>
+            </TD>
+          </TR>
+          <TR>
+            <TD>XML code</TD>
+            <TD>{code:xml}&lt;xmlnode prop=&quot;abc&quot;&gt;abc&lt;/xmlnode&gt;{code} </TD>
+            <TD><PRE class="jive-pre"><CODE class="jive-code jive-xml"><FONT color="navy"><B>&lt;xmlnode prop=</B></FONT><FONT color="red"><B>&quot;abc&quot;</B></FONT>&gt;abc<FONT color="navy"><B>&lt;/xmlnode&gt;</B></FONT></CODE></PRE>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+
+
+
+      <H3>Tables</H3>
+      <TABLE cellpadding="0" cellspacing="0" border="0">
+        <TBODY>
+          <TR>
+            <TH>Item</TH>
+            <TH>Markup</TH>
+            <TH>Result</TH>
+          </TR>
+        </TBODY>
+        <TBODY>
+          <TR>
+            <TD>Table headers</TD>
+            <TD>||ABC||DEF||</TD>
+            <TD><TABLE class="example-table">
+                <THEAD>
+                  <TR>
+                    <TH>ABC</TH>
+                    <TH>DEF</TH>
+                  </TR>
+                </THEAD>
+              </TABLE></TD>
+          </TR>
+          <TR>
+            <TD>Table cells</TD>
+            <TD>|ABC|DEF|</TD>
+            <TD><TABLE class="example-table">
+                <TBODY>
+                  <TR>
+                    <TD>ABC</TD>
+                    <TD>DEF</TD>
+                  </TR>
+                </TBODY>
+              </TABLE></TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      
+      
+      
+      <H3>Links</H3>
+      <P>Some links require the ID number of the content you&#39;re linking to.&nbsp;&nbsp;You can get this by navigating to the content and noting its number at the far right of your browser&#39;s address bar.</P>
+                    <table width="100%" cellspacing="1" cellpadding="0" border="0" style="margin-top: 12px;">
+        <THEAD>
+          <TR>
+            <TH>Item</TH>
+            <TH>Markup</TH>
+            <TH>Result</TH>
+          </TR>
+        </THEAD>
+        <TBODY>
+          <TR>
+            <TD>External image</TD>
+            <TD><!-- Image: !http://../post.gif! -->
+              !http://../post.gif! </TD>
+            <TD> Omitted
+              <!-- <IMG src="./Text Markup Syntax Help_files/post-16x16.gif" alt="Post" border="0">-->
+            </TD>
+          </TR>
+          <TR>
+            <TD>Internal image</TD>
+            <TD>!post.gif!</TD>
+            <TD> Omitted
+              <!-- <IMG src="./Text Markup Syntax Help_files/post-16x16.gif" alt="Post" border="0"> -->
+            </TD>
+          </TR>
+          <TR>
+            <TD>External site</TD>
+            <TD><!--Link: [http://www.example.com] -->
+              [http://www.example.com] </TD>
+            <TD><!-- <a href="http://www.example.com" onclick="return false;" onmouseover="window.status='http://www.example.com';" onmouseout="window.status='';">http://www.example.com</a> -->
+              <A href="http://www.example.com/" onClick="return false;" onMouseOver="window.status=&#39;http://www.example.com&#39;;" onMouseOut="window.status=&#39;&#39;;">http://www.example.com </A> </TD>
+          </TR>
+          <TR>
+            <TD>External site with label</TD>
+            <TD><!--Link: [Example site|http://www.example.com] -->
+              [Example site|http://www.example.com] </TD>
+            <TD><!-- <a href="http://www.example.com" onclick="return false;" onmouseover="window.status='http://www.example.com';" onmouseout="window.status='';">Example site</a> -->
+              <A href="http://www.example.com/" onClick="return false;" onMouseOver="window.status=&#39;http://www.example.com&#39;;" onMouseOut="window.status=&#39;&#39;;">Example site </A> </TD>
+          </TR>
+          <TR>
+            <TD>External site with label and tip</TD>
+            <TD><!--Link: [Example site|http://www.example.com|Example site tip] -->
+              [Example site|http://www.example.com|Example site tip] </TD>
+            <TD><!-- <a href="http://www.example.com" onclick="return false;" title="Example site tip" onmouseover="window.status='http://www.example.com';" onmouseout="window.status='';">Example site</a> -->
+              <A href="http://www.example.com/" onClick="return false;" title="Example site tip" onMouseOver="window.status=&#39;http://www.example.com&#39;;" onMouseOut="window.status=&#39;&#39;;">Example site </A> </TD>
+          </TR>
+          <TR>
+            <TD>Email</TD>
+            <TD><!--Email: [someone@example.com] -->
+              [someone@example.com] </TD>
+            <TD><!-- <a href="mailto:someone@example.com" onclick="return false;" onmouseover="window.status='mailto:someone@example.com';" onmouseout="window.status='';">someone@example.com</a> -->
+              <A href="mailto:someone@example.com" onClick="return false;" onMouseOver="window.status=&#39;someone@example.com&#39;;" onMouseOut="window.status=&#39;&#39;;">someone@example.com </A> </TD>
+          </TR>
+          <TR>
+            <TD>Attachment</TD>
+            <TD>[^1571]</TD>
+            <TD><A href="http://clearspace/servlet/JiveServlet/download/2530-5-1571/abc.gif"> abc.gif </A> </TD>
+          </TR>
+          <TR>
+            <TD>Blog</TD>
+            <TD>{blog:id=1032}</TD>
+            <TD><A href="https://clearspace/blogs/abc" class="jive-link-blog">ABC</A> </TD>
+          </TR>
+          <TR>
+            <TD>Blog post</TD>
+            <TD>{blogpost:id=1420}</TD>
+            <TD><A href="https://clearspace/blogs/abc/2007/03/05" class="jive-link-blogpost">ABC </A> </TD>
+          </TR>
+          <TR>
+            <TD>Space</TD>
+            <TD>{community:id=2007}</TD>
+            <TD><A href="https://clearspace/community/abc" class="jive-link-community"> ABC </A> </TD>
+          </TR>
+          <TR>
+            <TD>Discussion thread</TD>
+            <TD>{thread:id=1921}</TD>
+            <TD><A href="http://clearspace/thread/1921" class="jive-link-thread">ABC</A> </TD>
+          </TR>
+          <TR>
+            <TD>Discussion message</TD>
+            <TD>{message:id=3311}</TD>
+            <TD><A href="http://clearspace/message/3311#3311" class="jive-link-message"> Re: ABC </A> </TD>
+          </TR>
+          <TR>
+            <TD>Document</TD>
+            <TD>{document:id=2135}</TD>
+            <TD><A href="http://clearspace/docs/DOC-2135" class="jive-link-wiki">ABC</A> </TD>
+          </TR>
+          <TR>
+            <TD>User profile</TD>
+            <TD>{user:id=1}</TD>
+            <TD><A href="http://clearspace/people/user" class="jive-link-profile">User </A> </TD>
+          </TR>
+          <TR>
+            <TD>User profile</TD>
+            <TD>{user:username=user}</TD>
+            <TD><A href="http://clearspace/people/user" class="jive-link-profile">User </A> </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <H3>Example</H3>
+      <pre class="code-block">
+h1. Wiki markup help
+||Item||Makrup||Result||
+|Bold|{noformat}*ABC*{noformat}|*ABC*|
+|Italic|{noformat}+ABC+{noformat}|+ABC+|
+|Underline|{noformat}_ABC_{noformat}|_ABC_|
+|Superscript|{noformat}3^rd^{noformat}|3^rd^|
+|Subscript|{noformat}2~n~{noformat}|2~n~|
+|Strikethrough|{noformat}--ABC--{noformat}|--ABC--|
+|No formatting|{noformat}*ABC*{noformat}|{noformat}*ABC*{noformat}|
+|Color|{noformat}{color:#f00}ABC{color}{noformat}|{color:#f00}ABC{color}|
+|Color|{noformat}{color:blue}ABC{color}{noformat}|{color:blue}ABC{color}|
+|Color|{noformat}{font:courier new}ABC{font}{noformat}|{font:courier new}ABC{font}|
+|Font|{noformat}{size:16px}ABC{size}{noformat}|{size:16px}ABC{size}|
+|Line|{noformat}----{noformat}|----|
+
+h2. Numbered list
+{noformat}
+# ABC
+# DEF
+{noformat}
+# ABC
+# DEF
+
+h2. Bulleted list
+{noformat}
+* ABC
+* DEF
+{noformat}
+* ABC
+* DEF
+
+h2. Blockquote
+{noformat}
+bq. ABC
+{noformat}
+bq. ABC
+
+h2. Heading
+{noformat}
+h1. ABC
+h2. ABC
+h3. ABC
+h4. ABC
+h5. ABC
+h6. ABC
+{noformat}
+h1. ABC
+h2. ABC
+h3. ABC
+h4. ABC
+h5. ABC
+h6. ABC
+
+h2. Quoted text
+{noformat}
+{quote}
+ABC
+{quote}
+{noformat}
+
+{quote}
+ABC
+{quote}
+
+{noformat}
+{quote:title=ABC title}
+ABC
+
+{quote}
+{noformat}
+{quote:title=ABC title}
+ABC
+{quote}
+
+h2. Syntax highlighting
+
+h3. Java
+{noformat}
+{code:java}
+import com.jivesoftware.community.*;
+{code}
+{noformat}
+
+{code:java} import com.jivesoftware.community.*; {code}
+
+
+h3. XML
+
+{noformat}
+{code:xml}
+<A>
+  <B></B>
+  <C property="value"></C>
+</A>
+
+{code}
+{noformat}
+{code:xml}
+ <A>
+    <B></B>
+    <C property="value"></C>
+</A>
+{code}
+
+h3. SQL
+{noformat}
+{code:sql}
+SELECT COUNT(*) FROM abc;
+{code}
+{noformat}
+{code:sql}
+SELECT COUNT(*) FROM abc;
+{code}
+h2. Links
+||Item||Markup||Result||
+|External Site|{noformat}[http://www.jboss.org]{noformat}|[http://www.jboss.org]|
+|External Site with label|{noformat}[JBoss Community|http://www.jboss.org]{noformat}|[JBoss Community|http://www.jboss.org]|
+|Document|{noformat}{document:id=14251}{noformat}|{document:id=14251}|
+|Space|{noformat}{community:id=1}{noformat}|{community:id=1}|
+|User profile|{noformat}{user:username=admin}{noformat}|{user:username=admin}|
+</pre>
+                </div>
+            </div>
+            <div id="one-col-corners"/>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="/about.html">About Us</a> |
+            <a href="/contact.html">Contact Us</a> |
+            <a href="http://www.redhat.com/about/careers">Careers</a> |
+            <a href="http://www.jboss.com/">JBoss Enterprise</a> |
+            <a href="http://www.redhat.com/">Red Hat</a>
+        </p>
+        <p>
+            Powered by
+            <a href="http://www.magnolia-cms.com">Magnolia</a> ,
+            <a href="http://www.jivesoftware.com/poweredby/">Clearspace</a>,
+            <a href="http://www.jboss.com/products/platforms/application">JBoss EAP</a>, and
+            <a href="http://www.redhat.com/rhel/">RHEL</a>.
+        </p>
+    </div>
+</div>
+</BODY>
+</HTML>

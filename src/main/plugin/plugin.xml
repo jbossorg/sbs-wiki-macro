@@ -1,0 +1,23 @@
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="http://www.jivesoftware.com/schemas/clearspace/2_5/plugin.xsd">
+	<name>${project.artifactId}</name>
+	<description>${project.description}</description>
+	<author>${project.developers[0].name}</author>
+	<authorURL>${project.developers[0].url}</authorURL>
+	<pluginURL>${project.url}</pluginURL>
+	<version>${project.version}</version>
+	<minServerVersion>${sbs.min.version}</minServerVersion>
+	<maxServerVersion>${sbs.max.version}</maxServerVersion>
+
+	<!-- Plugin class  -->
+	<class>org.jboss.labs.clearspace.plugin.wiki.WikiPlugin</class>
+
+	<!--
+		For using Wiki conversion for incoming mails set this property:
+		property
+		checkMail.integrationProvider.class=org.jboss.labs.clearspace.plugin.wiki.WikiIntegrationProvider
+	  -->
+
+	<css src="/resources/wiki-plugin.css"/>
+
+</plugin>

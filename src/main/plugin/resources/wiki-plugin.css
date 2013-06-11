@@ -1,0 +1,9 @@
+#wysiwygtext_extra.mceButtonActive span.mce_extra, #wysiwygtext_extra.mceButtonSelected span.mce_extra, #wysiwygtext_extra:hover span.mce_extra {
+	background-position: -62px 1px;
+}
+
+#wysiwygtext_extra, #wysiwygtext_extra span.mce_extra {
+	background: #F6F6F6 url(images/wiki.gif) no-repeat 0px 1px;
+	height: 20px;
+	width: 62px;
+}
