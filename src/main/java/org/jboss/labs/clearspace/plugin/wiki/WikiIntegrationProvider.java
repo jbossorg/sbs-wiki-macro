@@ -5,10 +5,9 @@
  */
 package org.jboss.labs.clearspace.plugin.wiki;
 
-import ys.wikiparser.WikiParser;
-
-import com.jivesoftware.community.mail.EmailActionBuilder;
+import com.jivesoftware.community.mail.incoming.impl.EmailActionBuilder;
 import com.jivesoftware.community.mail.spi.DefaultIntegrationProvider;
+import ys.wikiparser.WikiParser;
 
 /**
  * Integration provider for wiki content.<br>

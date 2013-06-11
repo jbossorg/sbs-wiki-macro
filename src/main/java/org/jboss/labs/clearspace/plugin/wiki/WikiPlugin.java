@@ -11,13 +11,13 @@ import com.jivesoftware.community.renderer.RenderManager;
 /**
  * @author Libor Krzyzanek
  */
-public class WikiPlugin implements Plugin<WikiPlugin> {
+public class WikiPlugin implements Plugin {
 
 	private RenderManager renderManager;
 
 	private WikiMacro wikiMacro;
 
-	public void init() {
+	public void initPlugin() {
 		renderManager.addRenderPlugin(wikiMacro);
 	}
 
