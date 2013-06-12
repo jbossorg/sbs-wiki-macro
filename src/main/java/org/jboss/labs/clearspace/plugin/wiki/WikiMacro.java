@@ -123,7 +123,7 @@ public class WikiMacro extends BaseMacro {
 	public int getOrder() {
 		// very important - we need to ensure to run this macro before other macros
 		// like code, document etc.
-		return -10;
+		return -2000;
 	}
 
 	public boolean isShowSettings() {
