@@ -3,12 +3,12 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.jboss.sbs</groupId>
+	<groupId>org.jboss.jive</groupId>
 	<artifactId>wiki-macro</artifactId>
 	<name>SBS plugin: Wiki Markup macro</name>
 	<description>Wiki Markup macro</description>
 	<url>https://github.com/jbossorg/sbs-wiki-macro</url>
-	<version>2.0.1</version>
+	<version>3.0.0</version>
 
 	<inceptionYear>2010</inceptionYear>
 	<licenses>
