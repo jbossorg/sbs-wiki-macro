@@ -49,6 +49,9 @@ public class WikiMacro extends BaseMacro {
 
 	public void execute(Element element, RenderContext renderContext) {
 		String text = convertToOriginalWikiText(element);
+		if (log.isTraceEnabled()) {
+			log.trace("Original wiki text to markup: " + text);
+		}
 		WikiLexer lexer = new WikiLexer(text);
 		org.jdom.Element htmlNodes = lexer.parse();
 
@@ -99,6 +102,9 @@ public class WikiMacro extends BaseMacro {
 		for (int i = 0; i < childNodes.getLength(); i++) {
 			Node node = childNodes.item(i);
 			String nodeContent = node.getTextContent();
+			if (log.isTraceEnabled()) {
+				log.trace("Processing node: " + node.getNodeName() + ", content: " + nodeContent);
+			}
 			if ("p".equalsIgnoreCase(node.getNodeName())) {
 				value.append(nodeContent);
 				if (!nodeContent.endsWith("\n")) {
