@@ -52,13 +52,8 @@ public class WikiMacro extends BaseMacro {
 		if (log.isTraceEnabled()) {
 			log.trace("Original wiki text to markup: " + text);
 		}
-		WikiLexer lexer = new WikiLexer(text);
-		org.jdom.Element htmlNodes = lexer.parse();
 
-		HtmlBuilder builder = new HtmlBuilder(htmlNodes);
-		builder.build();
-		String xhtmlBody = elementToString(htmlNodes);
-		xhtmlBody = StringUtils.escapeEntitiesInXmlString(xhtmlBody);
+		String xhtmlBody = renderWikiSyntax(text);
 
 		Node parsedParent = JAXPUtils.toXmlNode(xhtmlBody);
 
@@ -71,6 +66,16 @@ public class WikiMacro extends BaseMacro {
 			span.setTextContent(text);
 			JAXPUtils.replace(element, span);
 		}
+	}
+
+	protected String renderWikiSyntax(String text) {
+		WikiLexer lexer = new WikiLexer(text);
+		org.jdom.Element htmlNodes = lexer.parse();
+
+		HtmlBuilder builder = new HtmlBuilder(htmlNodes);
+		builder.build();
+		String xhtmlBody = elementToString(htmlNodes);
+		return StringUtils.escapeEntitiesInXmlString(xhtmlBody);
 	}
 
 	/**
@@ -107,9 +112,10 @@ public class WikiMacro extends BaseMacro {
 			}
 			if ("p".equalsIgnoreCase(node.getNodeName())) {
 				value.append(nodeContent);
-				if (!nodeContent.endsWith("\n")) {
-					value.append("\n");
-				}
+				// No need to add end of line. In Jive 6 it's there by default even after removing P tags
+//				if (!nodeContent.endsWith("\n")) {
+//					value.append("\n");
+//				}
 			} else if ("br".equalsIgnoreCase(node.getNodeName())) {
 				value.append("\n");
 			} else {
