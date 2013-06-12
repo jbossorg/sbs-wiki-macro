@@ -17,7 +17,8 @@
 		property
 		checkMail.integrationProvider.class=org.jboss.labs.clearspace.plugin.wiki.WikiIntegrationProvider
 	  -->
-
+	<!--
+	    If you want to use this macro as a button in RTE then it's needed to uncomment following section
 	<css src="/resources/wiki-plugin.css"/>
-
+	-->
 </plugin>

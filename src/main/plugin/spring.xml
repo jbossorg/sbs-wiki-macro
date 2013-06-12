@@ -10,7 +10,7 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 	</bean>
 
 	<bean id="wikiMacro" class="org.jboss.labs.clearspace.plugin.wiki.WikiMacro">
-		<property name="button" value="true"/>
+		<property name="button" value="false"/>
 	</bean>
 
 </beans>
