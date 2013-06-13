@@ -5,17 +5,6 @@
  */
 package org.jboss.labs.clearspace.plugin.wiki;
 
-import java.io.IOException;
-import java.io.StringWriter;
-
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.jdom.output.Format;
-import org.jdom.output.XMLOutputter;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 import com.jivesoftware.base.wiki.HtmlBuilder;
 import com.jivesoftware.base.wiki.WikiLexer;
 import com.jivesoftware.community.renderer.BaseMacro;
@@ -27,6 +16,16 @@ import com.jivesoftware.community.renderer.annotations.SingleTagMacro;
 import com.jivesoftware.community.renderer.impl.v2.HtmlRenderUtils;
 import com.jivesoftware.community.renderer.impl.v2.JAXPUtils;
 import com.jivesoftware.util.StringUtils;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.jdom.output.Format;
+import org.jdom.output.XMLOutputter;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import java.io.IOException;
+import java.io.StringWriter;
 
 /**
  * Macro for Wiki markup
@@ -112,10 +111,19 @@ public class WikiMacro extends BaseMacro {
 			}
 			if ("p".equalsIgnoreCase(node.getNodeName())) {
 				value.append(nodeContent);
-				// No need to add end of line. In Jive 6 it's there by default even after removing P tags
-//				if (!nodeContent.endsWith("\n")) {
-//					value.append("\n");
-//				}
+				// In Jive 6 end of line is already in DB and is represented as next node containing only end of line.
+				// Then adding end of line is not needed.
+				int nextNodeIndex = i + 1;
+				boolean nextNodeHasEOL = false;
+				if (nextNodeIndex < childNodes.getLength()) {
+					Node nextNode = childNodes.item(nextNodeIndex);
+					if ("\n".equals(nextNode.getTextContent())) {
+						nextNodeHasEOL = true;
+					}
+				}
+				if (!nodeContent.endsWith("\n") && !nextNodeHasEOL) {
+					value.append("\n");
+				}
 			} else if ("br".equalsIgnoreCase(node.getNodeName())) {
 				value.append("\n");
 			} else {
