@@ -15,3 +15,11 @@ Installation steps
 
 1. Install plugin via Admin console
 2. Restart application
+
+Development
+-----------
+
+
+### Logging
+
+To enable verbose logging for system renderer then change logging lavel to TRACE on class `com.jivesoftware.community.renderer.util.RenderLogger`.
